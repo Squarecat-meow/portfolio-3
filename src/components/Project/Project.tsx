@@ -56,6 +56,7 @@ function Project() {
             <div className="relative w-fit">
               <img
                 id={`thumb-${card.id}`}
+                alt={card.title}
                 src={card.image}
                 onClick={() => openCard(card.id)}
                 className="w-sm cursor-pointer"
@@ -78,7 +79,11 @@ function Project() {
 
             <div id="modal-card" style={{ transformStyle: 'preserve-3d' }}>
               <div id="card-front">
-                <img src={activeCard.image} className="w-full h-auto" />
+                <img
+                  src={activeCard.image}
+                  alt={activeCard.title}
+                  className="w-full h-auto"
+                />
               </div>
 
               <div

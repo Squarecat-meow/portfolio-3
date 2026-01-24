@@ -16,10 +16,13 @@ function NeoQuesdon() {
   return (
     <>
       <div className="h-fit grid grid-cols-1 lg:grid-cols-2 gap-3">
-        <img src="/screenshots/Pasted-image-5.png" />
-        <img src="/screenshots/Pasted-image-6.png" />
-        <img src="/screenshots/Pasted-image-7.png" />
-        <img src="/screenshots/Pasted-image-8.png" />
+        <img src="/screenshots/Pasted-image-5.png" alt="Blog Main Image" />
+        <img src="/screenshots/Pasted-image-6.png" alt="Blog Post Image" />
+        <img
+          src="/screenshots/Pasted-image-7.png"
+          alt="Blog Edit Timeline Image"
+        />
+        <img src="/screenshots/Pasted-image-8.png" alt="Blog Writer Image" />
       </div>
       <div className="space-y-3 font-hangul-body">
         <h1 className="text-5xl font-hangul-heading">개인 블로그</h1>

@@ -16,10 +16,13 @@ function NeoQuesdon() {
   return (
     <>
       <div className="h-fit grid grid-cols-1 lg:grid-cols-2 gap-3">
-        <img src="/screenshots/Pasted-image-9.png" />
-        <img src="/screenshots/Pasted-image-10.png" />
-        <img src="/screenshots/Pasted-image-11.png" />
-        <img src="/screenshots/Pasted-image-12.png" />
+        <img src="/screenshots/Pasted-image-9.png" alt="Keomoji Login Image" />
+        <img src="/screenshots/Pasted-image-10.png" alt="Keomoji Main Image" />
+        <img
+          src="/screenshots/Pasted-image-11.png"
+          alt="Keomoji Submission Image"
+        />
+        <img src="/screenshots/Pasted-image-12.png" alt="Keomoji Admin Image" />
       </div>
       <div className="space-y-3 font-hangul-body">
         <h1 className="text-5xl font-hangul-heading">

@@ -16,10 +16,19 @@ function NeoQuesdon() {
   return (
     <>
       <div className="h-fit grid grid-cols-1 lg:grid-cols-2 gap-3">
-        <img src="/screenshots/Pasted-image.png" />
-        <img src="/screenshots/Pasted-image-2.png" />
-        <img src="/screenshots/Pasted-image-3.png" />
-        <img src="/screenshots/Pasted-image-4.png" />
+        <img src="/screenshots/Pasted-image.png" alt="NeoQuesdon Login Image" />
+        <img
+          src="/screenshots/Pasted-image-2.png"
+          alt="NeoQuesdon Main Image"
+        />
+        <img
+          src="/screenshots/Pasted-image-3.png"
+          alt="NeoQuesdon Profile Image"
+        />
+        <img
+          src="/screenshots/Pasted-image-4.png"
+          alt="NeoQuesdon Notification Image"
+        />
       </div>
       <div className="space-y-3 font-hangul-body">
         <h1 className="text-5xl font-hangul-heading">네오-퀘스돈</h1>
