@@ -3,6 +3,8 @@ import { useCardFlip } from '../../hooks/useCardFlip';
 import Blog from './Blog';
 import Keomoji from './Keomoji';
 import NeoQuesdon from './NeoQuesdon';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 interface CardData {
   id: string;
@@ -33,6 +35,25 @@ function Project() {
     },
   ];
   const { activeCardId, showContent, openCard, closeCard } = useCardFlip();
+  const { contextSafe } = useGSAP();
+
+  const onCardEnter = contextSafe((cardId: string) => {
+    gsap.to(cardId, {
+      y: -5,
+      boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+      duration: 0.2,
+      ease: 'power3.inOut',
+    });
+  });
+
+  const onCardLeave = contextSafe((cardId: string) => {
+    gsap.to(cardId, {
+      y: 0,
+      boxShadow: 'unset',
+      duration: 0.2,
+      ease: 'power3.inOut',
+    });
+  });
 
   const activeCard = cards.find((c) => c.id === activeCardId);
 
@@ -59,6 +80,8 @@ function Project() {
                 alt={card.title}
                 src={card.image}
                 onClick={() => openCard(card.id)}
+                onMouseEnter={() => onCardEnter(`#thumb-${card.id}`)}
+                onMouseLeave={() => onCardLeave(`#thumb-${card.id}`)}
                 className="w-sm cursor-pointer"
                 style={{
                   visibility: activeCardId === card.id ? 'hidden' : 'visible',
