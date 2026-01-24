@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'Playfair Display', serif;
+  --font-hangul-heading: 'Song Myung', serif;
+  --font-hangul-body: 'Asta Sans', sans-serif;
+}
