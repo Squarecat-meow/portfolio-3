@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="w-full h-12 fixed inset-0 flex justify-center items-center z-10">
+    <nav className="w-full h-12 fixed inset-0 flex justify-center items-center z-[2]">
       <div className="w-[85%] flex justify-between">
         <h1 className="font-bold">
           JSR<span className="text-red-500">.</span>

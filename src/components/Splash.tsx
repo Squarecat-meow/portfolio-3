@@ -39,7 +39,7 @@ function Splash() {
   );
 
   return isMounted ? (
-    <main className="absolute w-full h-screen inset-0 grid">
+    <main className="absolute w-full h-screen inset-0 grid z-[3]">
       <div className="relative h-full">
         <div
           className="w-full h-1/2 bg-white z-20"
