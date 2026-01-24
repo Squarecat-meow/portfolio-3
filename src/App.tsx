@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import gsap from 'gsap';
 import { Observer } from 'gsap/Observer';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import About from './components/About/About';
 import Background from './components/Background';
 import Contact from './components/Contact/Contact';
@@ -11,6 +11,7 @@ import Hero from './components/Hero/Hero';
 import ModelOne from './components/Model-1';
 import Navbar from './components/Navbar';
 import Project from './components/Project/Project';
+import Splash from './components/Splash';
 
 gsap.registerPlugin(Observer, ScrollToPlugin);
 
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <main id="main-container">
+      <Splash />
       <Navbar />
       <Hero />
       <About />
@@ -56,8 +58,10 @@ function App() {
       <Contact />
       <div className="fixed inset-0 min-w-screen min-h-screen -z-[1]">
         <Canvas camera={{ position: [7, 0, 4], rotateY: 20, fov: 45 }}>
-          <ambientLight intensity={2.3} />
-          <ModelOne />
+          <Suspense fallback={null}>
+            <ambientLight intensity={2.3} />
+            <ModelOne />
+          </Suspense>
         </Canvas>
       </div>
       <p className="fixed bottom-6 left-6 text-xs text-slate-400 tracking-[0.5em]">
