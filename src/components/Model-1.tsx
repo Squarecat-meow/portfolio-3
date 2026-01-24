@@ -209,5 +209,8 @@ function ModelOne() {
   );
 }
 useGLTF.preload('/model-1.glb');
+useGLTF.preload('/model-2.glb');
+useGLTF.preload('/model-3.glb');
+useGLTF.preload('/model-4.glb');
 
 export default ModelOne;

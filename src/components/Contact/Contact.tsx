@@ -41,7 +41,7 @@ function Contact() {
       <section />
       <section className="flex flex-row lg:flex-col justify-center items-center lg:items-start gap-4">
         {contacts.map((el) => (
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1" key={el.description}>
             {el.icon}
             <div className="w-full border-b border-b-rose-300" />
             <a href={el.address} target="_blank" rel="noopener noreferrer">

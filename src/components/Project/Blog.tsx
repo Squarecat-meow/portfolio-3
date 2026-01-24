@@ -63,7 +63,7 @@ function NeoQuesdon() {
         <h2 className="text-3xl font-hangul-heading">기술 스택</h2>
         <div className="flex gap-2 flex-wrap">
           {stacks.map((el) => (
-            <Stack text={el} />
+            <Stack text={el} key={el} />
           ))}
         </div>
         <h2 className="text-3xl font-hangul-heading">주요 구현</h2>

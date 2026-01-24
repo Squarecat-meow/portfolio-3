@@ -14,34 +14,42 @@ import Stack from './Stack';
 function About() {
   const stacks = [
     {
+      id: 1,
       icon: <SiTypescript />,
       desc: 'Typescript',
     },
     {
+      id: 2,
       icon: <SiReact />,
       desc: 'React',
     },
     {
+      id: 3,
       icon: <SiNextdotjs />,
       desc: 'Next.js',
     },
     {
+      id: 4,
       icon: <SiTailwindcss />,
       desc: 'Tailwind CSS',
     },
     {
+      id: 5,
       icon: <SiPostgresql />,
       desc: 'PostgreSQL',
     },
     {
+      id: 6,
       icon: <SiPrisma />,
       desc: 'Prisma ORM',
     },
     {
+      id: 7,
       icon: <SiFramer />,
       desc: 'Framer Motion',
     },
     {
+      id: 8,
       icon: <SiGsap />,
       desc: 'GSAP',
     },
@@ -97,7 +105,7 @@ function About() {
           <h2 className="mt-6 mb-2 text-2xl font-hangul-heading">주요 스택</h2>
           <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 w-full">
             {stacks.map((el) => (
-              <Stack icon={el.icon} stack={el.desc} />
+              <Stack icon={el.icon} stack={el.desc} key={el.id} />
             ))}
           </div>
         </section>
