@@ -26,10 +26,7 @@ function Contact() {
     },
   ];
   return (
-    <main
-      id="section-4"
-      className="min-h-screen grid grid-cols-1 lg:grid-cols-3"
-    >
+    <main id="contact" className="min-h-screen grid grid-cols-1 lg:grid-cols-3">
       <section className="flex justify-center lg:justify-end items-center">
         <div>
           <p className="text-xs text-slate-400 tracking-[0.5em] mb-4">

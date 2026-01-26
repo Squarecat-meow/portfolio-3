@@ -6,16 +6,16 @@ function Navbar() {
           JSR<span className="text-red-500">.</span>
         </h1>
         <div className="flex gap-4 lg:gap-12">
-          <a href="#section-1" className="font-light">
+          <a href="#hero" className="font-light">
             Home
           </a>
-          <a href="#section-2" className="font-light">
+          <a href="#about" className="font-light">
             About
           </a>
-          <a href="#section-3" className="font-light">
+          <a href="#project" className="font-light">
             Project
           </a>
-          <a href="#section-4" className="font-light">
+          <a href="#contact" className="font-light">
             Contact
           </a>
         </div>

@@ -3,7 +3,7 @@ import ScrollDown from './ScrollDown';
 function Hero() {
   return (
     <main
-      id="section-1"
+      id="hero"
       className="min-h-screen grid grid-cols-1 lg:grid-cols-5 gap-2 place-items-center"
     >
       <div className="col-span-2">

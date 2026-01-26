@@ -75,7 +75,7 @@ function About() {
   ];
   return (
     <main
-      id="section-2"
+      id="about"
       className="min-h-screen w-full p-4 lg:p-0 grid grid-cols-1 lg:grid-cols-2"
     >
       <section />

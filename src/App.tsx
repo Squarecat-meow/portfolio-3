@@ -18,7 +18,7 @@ gsap.registerPlugin(Observer, ScrollToPlugin);
 function App() {
   const currentIdx = useRef(0);
   const isAnimating = useRef(false);
-  const sections = ['#section-1', '#section-2', '#section-3', '#section-4'];
+  const sections = ['#hero', '#about', '#project', '#contact'];
 
   useGSAP(() => {
     const goToSection = (idx: number) => {

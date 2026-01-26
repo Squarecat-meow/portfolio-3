@@ -59,7 +59,7 @@ function Project() {
 
   return (
     <main
-      id="section-3"
+      id="project"
       className="relative min-h-screen w-full flex flex-col items-center"
     >
       <div className="flex flex-col items-center mb-0 lg:mb-4">
