@@ -68,29 +68,31 @@ function Project() {
         </span>
         <h1 className="text-5xl font-hangul-heading">지금까지 만든 것들</h1>
       </div>
-      <ul className="flex flex-col lg:flex-row p-6 gap-4 lg:gap-12">
-        {cards.map((card) => (
-          <li key={card.id}>
-            <h2 className="text-2xl font-heading mt-2 lg:mt-12">
-              {card.title}
-            </h2>
-            <div className="relative w-fit">
-              <img
-                id={`thumb-${card.id}`}
-                alt={card.title}
-                src={card.image}
-                onClick={() => openCard(card.id)}
-                onMouseEnter={() => onCardEnter(`#thumb-${card.id}`)}
-                onMouseLeave={() => onCardLeave(`#thumb-${card.id}`)}
-                className="w-sm cursor-pointer"
-                style={{
-                  visibility: activeCardId === card.id ? 'hidden' : 'visible',
-                }}
-              />
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className="w-full h-full grid grid-cols-3">
+        <ul className="col-span-3 lg:col-span-2 flex flex-col lg:flex-row p-6 gap-4 lg:gap-12">
+          {cards.map((card) => (
+            <li key={card.id}>
+              <h2 className="text-2xl font-heading mt-2 lg:mt-12">
+                {card.title}
+              </h2>
+              <div className="relative w-fit">
+                <img
+                  id={`thumb-${card.id}`}
+                  alt={card.title}
+                  src={card.image}
+                  onClick={() => openCard(card.id)}
+                  onMouseEnter={() => onCardEnter(`#thumb-${card.id}`)}
+                  onMouseLeave={() => onCardLeave(`#thumb-${card.id}`)}
+                  className="w-sm cursor-pointer"
+                  style={{
+                    visibility: activeCardId === card.id ? 'hidden' : 'visible',
+                  }}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
       {activeCard &&
         createPortal(
           <div className="fixed inset-0 z-[99]">
