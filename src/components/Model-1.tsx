@@ -11,7 +11,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function ModelOne() {
   const { scene: scene1 } = useGLTF('/model-1.glb');
   const { scene: scene2 } = useGLTF('/model-2.glb');
-  const { scene: scene3 } = useGLTF('/model-3.glb');
+  const { scene: scene3 } = useGLTF('/model-5.glb');
   const { scene: scene4 } = useGLTF('/model-4.glb');
   const outerRef = useRef<THREE.Group>(null!);
   const outer2Ref = useRef<THREE.Group>(null!);
@@ -110,25 +110,23 @@ function ModelOne() {
       .to(
         outerRef.current.position,
         {
-          x: -16,
-          y: 1,
-          z: 14,
+          z: 8,
           duration: 1,
           ease: 'power3.out',
         },
         '<',
       )
       .fromTo(
-        inner3Ref.current.scale,
+        inner3Ref.current.position,
         {
-          x: 0,
-          y: 0,
-          z: 0,
+          x: 8,
+          y: -1,
+          z: -7,
         },
         {
-          x: 10,
-          y: 10,
-          z: 10,
+          x: 0,
+          y: -1,
+          z: -7,
           duration: 1,
           ease: 'power3.out',
           onStart: () => {
@@ -137,25 +135,11 @@ function ModelOne() {
         },
         '<',
       )
-      .to(
-        inner3Ref.current.position,
-        {
-          y: -8,
-          z: 0.2,
-          duration: 1,
-          ease: 'power3.out',
-        },
-        '<',
-      )
-      .to(
-        inner3Ref.current.rotation,
-        {
-          y: Math.PI * 2,
-          duration: 1,
-          ease: 'power3.out',
-        },
-        '<',
-      );
+      .to(inner3Ref.current.position, {
+        y: -3,
+        duration: 1,
+        ease: 'power3.out',
+      });
 
     tl.to(inner3Ref.current.position, {
       y: -15,
@@ -198,7 +182,7 @@ function ModelOne() {
         </group>
       </group>
       <group ref={inner3Ref} visible={false}>
-        <primitive object={scene3} rotation={[-0.9, 7.1, 0.5]} />;
+        <primitive object={scene3} rotation={[0, 6.9, 0]} scale={6} />;
       </group>
       <group ref={outer2Ref}>
         <group ref={inner4Ref} visible={false}>
@@ -210,7 +194,7 @@ function ModelOne() {
 }
 useGLTF.preload('/model-1.glb');
 useGLTF.preload('/model-2.glb');
-useGLTF.preload('/model-3.glb');
 useGLTF.preload('/model-4.glb');
+useGLTF.preload('/model-5.glb');
 
 export default ModelOne;
