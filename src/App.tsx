@@ -12,13 +12,14 @@ import ModelOne from './components/Model-1';
 import Navbar from './components/Navbar';
 import Project from './components/Project/Project';
 import Splash from './components/Splash';
+import Career from './components/Career/Career';
 
 gsap.registerPlugin(Observer, ScrollToPlugin);
 
 function App() {
   const currentIdx = useRef(0);
   const isAnimating = useRef(false);
-  const sections = ['#hero', '#about', '#project', '#contact'];
+  const sections = ['#hero', '#about', '#project', '#career', '#contact'];
 
   useGSAP(() => {
     const goToSection = (idx: number) => {
@@ -55,6 +56,7 @@ function App() {
       <Hero />
       <About />
       <Project />
+      <Career />
       <Contact />
       <div className="fixed inset-0 min-w-screen min-h-screen -z-[1]">
         <Canvas camera={{ position: [7, 0, 4], rotateY: 20, fov: 45 }}>

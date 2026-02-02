@@ -30,7 +30,7 @@ function Contact() {
       <section className="flex justify-center lg:justify-end items-center">
         <div>
           <p className="text-xs text-slate-400 tracking-[0.5em] mb-4">
-            04 - CONTACT
+            05 - CONTACT
           </p>
           <h1 className="font-hangul-heading text-5xl">감사합니다!</h1>
         </div>
